@@ -1,0 +1,11 @@
+version: '2.2'
+
+services:
+    web:
+        container_name: flask_post1
+        build:
+            context: "."
+        command: gunicorn --bind 0.0.0.0:8080 app:app
+        ports:
+            - "8080:8080"
+
